@@ -53,10 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         button.parentElement.remove();
     }
 
-    document.getElementById('save-button').addEventListener('click', () => {
-        document.getElementById('format-selection').classList.toggle('hidden');
-    });
-
     window.removeItem = removeItem;
 
     window.saveAsText = function() {
