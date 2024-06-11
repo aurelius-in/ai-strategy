@@ -39,6 +39,13 @@
             </form>
             <ul id="progress-list"></ul>
         </div>
+        
+        <button id="save-button"><i class="fas fa-save"></i> Save / Share</button>
+        <div id="format-selection" class="hidden">
+            <button onclick="saveAsText()"><i class="fas fa-file-alt"></i> Save as Text</button>
+            <button onclick="saveAsPDF()"><i class="fas fa-file-pdf"></i> Save as PDF</button>
+            <button onclick="saveAsJSON()"><i class="fas fa-file-code"></i> Save as JSON</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
