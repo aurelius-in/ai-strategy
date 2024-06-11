@@ -1,4 +1,5 @@
-body, h1, h2, p, input, button, ul, li {
+/* Reset some default styles */
+body, h2, p, input, button, ul, li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +7,8 @@ body, h1, h2, p, input, button, ul, li {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #282c34, #3b3f47);
+    background: url('strategy-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -14,22 +16,19 @@ body {
     height: 100vh;
     margin: 0;
     padding: 20px;
+    overflow: hidden;
 }
 
 .container {
-    background: #3b3f47;
+    background: rgba(0, 0, 0, 0.7); /* Add a background color with transparency for readability */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 600px;
     text-align: center;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #61dafb;
+    overflow-y: auto;
+    max-height: 80vh; /* Ensure it fits within the screen */
 }
 
 .section {
