@@ -53,5 +53,49 @@ document.addEventListener('DOMContentLoaded', () => {
         button.parentElement.remove();
     }
 
+    document.getElementById('save-button').addEventListener('click', () => {
+        document.getElementById('format-selection').classList.toggle('hidden');
+    });
+
     window.removeItem = removeItem;
+
+    window.saveAsText = function() {
+        const content = generateContent();
+        const blob = new Blob([content], { type: 'text/plain' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'ai_strategy.txt';
+        link.click();
+    };
+
+    window.saveAsPDF = function() {
+        const content = generateContent();
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        doc.text(content, 10, 10);
+        doc.save('ai_strategy.pdf');
+    };
+
+    window.saveAsJPEG = function() {
+        html2canvas(document.querySelector('.container')).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/jpeg');
+            link.download = 'ai_strategy.jpg';
+            link.click();
+        });
+    };
+
+    function generateContent() {
+        let content = 'AI Strategy Planner\n\nGoals:\n';
+        content += getListContent(goalList);
+        content += '\nRoadmap:\n';
+        content += getListContent(roadmapList);
+        content += '\nProgress:\n';
+        content += getListContent(progressList);
+        return content;
+    }
+
+    function getListContent(list) {
+        return Array.from(list.children).map(item => item.innerText.replace(' Remove', '')).join('\n');
+    }
 });
