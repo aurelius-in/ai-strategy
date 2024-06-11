@@ -6,6 +6,7 @@
     <title>AI Strategy Planner</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6bZdD1ILqczV/y5Q1X1g/7Ndr0MGeb+Hug/l7XrPq7QLo9RxF6kHD4Un5b2D4R9+EfoA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,7 @@
             <h2>Set AI Goals</h2>
             <form id="goal-form">
                 <input type="text" id="goal-input" placeholder="Enter your AI goal" required>
-                <button type="submit">Add Goal</button>
+                <button type="submit"><i class="fas fa-plus"></i> Add Goal</button>
             </form>
             <ul id="goal-list"></ul>
         </div>
@@ -25,13 +26,17 @@
             <form id="roadmap-form">
                 <input type="text" id="milestone-input" placeholder="Enter milestone" required>
                 <input type="date" id="milestone-date" required>
-                <button type="submit">Add Milestone</button>
+                <button type="submit"><i class="fas fa-plus"></i> Add Milestone</button>
             </form>
             <ul id="roadmap-list"></ul>
         </div>
 
         <div class="section">
             <h2>Track Progress</h2>
+            <form id="progress-form">
+                <input type="text" id="progress-input" placeholder="Enter progress update" required>
+                <button type="submit"><i class="fas fa-plus"></i> Add Update</button>
+            </form>
             <ul id="progress-list"></ul>
         </div>
     </div>
