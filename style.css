@@ -12,7 +12,7 @@ body {
     color: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     padding: 20px;
@@ -29,14 +29,16 @@ body {
     text-align: center;
     overflow-y: auto;
     max-height: 80vh; /* Ensure it fits within the screen */
+    margin-top: 80px; /* Leave room for the logo */
 }
 
 .section {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 h2 {
-    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace; /* More interesting font */
+    font-size: 1.5em; /* Smaller font size */
     margin-bottom: 10px;
     color: #61dafb;
 }
@@ -45,7 +47,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 input[type="text"], input[type="date"] {
@@ -58,17 +60,18 @@ input[type="text"], input[type="date"] {
 }
 
 button {
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduced padding */
     background-color: #61dafb;
     color: #282c34;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1em; /* Reduced font size */
     transition: background-color 0.3s;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced margin */
+    width: auto; /* Less wide */
 }
 
 button i {
@@ -118,4 +121,10 @@ li button i {
 
 li button:hover {
     background: #ff1a1a;
+}
+
+.save-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
