@@ -7,7 +7,7 @@ body, h2, p, input, button, ul, li, label {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: url('strategy-bg.jpg') no-repeat center center fixed;
+    background: url('strategy-bg.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     display: flex;
@@ -28,8 +28,8 @@ body {
     max-width: 600px;
     text-align: center;
     overflow-y: auto;
-    max-height: 80vh; /* Ensure it fits within the screen */
-    margin-top: 80px; /* Leave room for the logo */
+    max-height: 70vh; /* Ensure it fits within the screen */
+    margin-top: 120px; /* Leave more room for the logo */
 }
 
 .section {
