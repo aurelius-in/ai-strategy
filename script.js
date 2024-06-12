@@ -92,6 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function getListContent(list) {
-        return Array.from(list.children).map(item => item.innerText.replace(' Remove', '')).join('\n');
+        return Array.from(list.children).map(item => {
+            return item.innerText.replace(' Remove', '');
+        }).join('\n');
     }
 });
+
