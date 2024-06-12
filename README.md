@@ -1,6 +1,6 @@
-# ai-strategy
 
-Try App: https://aurelius-in.github.io/ai-strategy/
+
+**Try the App**: https://aurelius-in.github.io/ai-strategy/
 
 ## AI Strategy Planner
 
