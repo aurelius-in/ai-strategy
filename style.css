@@ -1,5 +1,5 @@
 /* Reset some default styles */
-body, h2, p, input, button, ul, li {
+body, h2, p, input, button, ul, li, label {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -57,6 +57,14 @@ input[type="text"], input[type="date"] {
     border: 1px solid #ccc;
     margin-bottom: 10px;
     font-size: 1em;
+}
+
+label {
+    width: 100%;
+    text-align: left;
+    color: #61dafb;
+    font-size: 1em;
+    margin-bottom: 5px;
 }
 
 button {
